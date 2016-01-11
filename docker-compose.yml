@@ -1,0 +1,9 @@
+api:
+  build: .
+  net: "host"
+  working_dir: /src/
+  command: "grunt serve"
+  ports:
+    - "3000:3000"
+  volumes:
+    - "./:/src/"
