@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         nodemon: {
             script: 'server.js',
             options: {
-                watch: ['./'],
+                watch: ['./api'],
                 legacyWatch: true
             }
         }

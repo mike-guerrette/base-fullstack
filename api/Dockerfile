@@ -7,6 +7,6 @@ RUN npm install
 
 ADD ./Gruntfile.js /src/Gruntfile.js
 
-COPY ./ /src
+COPY ./ /src/api
 
 ENV PATH "$PATH:node_modules/.bin"

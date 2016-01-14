@@ -1,9 +1,16 @@
 api:
-  build: .
-  net: "host"
+  build: ./api
   working_dir: /src/
   command: "grunt serve"
   ports:
     - "3000:3000"
   volumes:
-    - "./:/src/"
+    - "./api:/src/api"
+web:
+  build: ./web
+  working_dir: /src/
+  command: "grunt serve"
+  ports:
+    - "9000:9000"
+  volumes:
+    - "./web:/src/web"
