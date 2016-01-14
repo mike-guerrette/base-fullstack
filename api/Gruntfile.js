@@ -15,4 +15,12 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('serve', ['nodemon']);
+
+    // Register the scripts as individual tasks
+    grunt.file.expand('./api/scripts/*.js').forEach(function(filename) {
+        var script = filename.slice(14, -3);
+        grunt.registerTask(script, 'Run ' + script + ' script', function() {
+            require(filename).run(grunt, this.async());
+        });
+    });
 };

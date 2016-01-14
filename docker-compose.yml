@@ -1,3 +1,10 @@
+db:
+  image: postgres
+  ports:
+    - "15432:5432"
+  environment:
+    POSTGRES_PASSWORD: docker
+    POSTGRES_USER: docker
 api:
   build: ./api
   working_dir: /src/
@@ -6,6 +13,8 @@ api:
     - "3000:3000"
   volumes:
     - "./api:/src/api"
+  links:
+    - db
 web:
   build: ./web
   working_dir: /src/

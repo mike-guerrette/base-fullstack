@@ -1,5 +1,7 @@
 FROM mhart/alpine-node:4
 
+RUN apk add --update git bash
+
 WORKDIR /src/
 
 ADD ./package.json /src/package.json

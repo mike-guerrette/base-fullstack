@@ -6,11 +6,14 @@
   "license": "MIT",
   "main": "api/server.js",
   "dependencies": {
+    "async": "^1.5.2",
     "express": "^4.13.3",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-nodemon": "^0.4.1",
     "load-grunt-tasks": "^3.4.0",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "orm": "^2.1.29",
+    "pg": "^4.4.3"
   }
 }
