@@ -1,0 +1,15 @@
+doctype html
+html
+head
+    title= 'Base App'
+    base(href='/')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    each file in assets.css
+        link(rel='stylesheet' href=file)
+
+body(ng-app="app" layout='row')
+    div(layout="row" ui-view flex)
+
+    each file in assets.javascript
+        script(src=file)

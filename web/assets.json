@@ -1,0 +1,9 @@
+{
+  "css": [],
+  "javascript": [
+    "bower_components/angular/angular.js",
+    "bower_components/angular-ui-router/release/angular-ui-router.js",
+    "app.js",
+    "routes.js"
+  ]
+}
